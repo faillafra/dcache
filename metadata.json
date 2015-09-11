@@ -1,0 +1,14 @@
+{
+  "name": "talamoig-dcache",
+  "version": "0.1.0",
+  "author": "talamoig",
+  "summary": "Puppet module for dCache (http://www.dcache.org) Storage System",
+  "license": "Apache 2.0",
+  "source": "https://github.com/talamoig/dcache",
+  "issues_url": "https://github.com/talamoig/dcache/issues",
+  "project_page": "https://github.com/talamoig/dcache",
+  "dependencies": [
+    {"version_requirement":">= 1.0.0","name":"puppetlabs-stdlib"}
+  ]
+}
+
