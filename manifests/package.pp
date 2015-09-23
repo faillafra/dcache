@@ -12,12 +12,13 @@ class dcache::package {
     ensure  => present,
     require => Exec['download-rpm']
   }
-  
+
   package{$dcachepkg:
-    ensure => "${dcache::version}.${dcache::release}",
-    provider => 'rpm',
-    source => "/tmp/${dcachepkg}.rpm",
-    require => File["/tmp/${dcachepkg}.rpm"]
+    ensure          => "${dcache::version}.${dcache::release}",
+    provider        => 'rpm',
+    install_options => ['-U'],
+    source          => "/tmp/${dcachepkg}.rpm",
+    require         => File["/tmp/${dcachepkg}.rpm"]
   }
 
   service{'dcache-server':
