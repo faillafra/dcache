@@ -3,7 +3,7 @@ class dcache::package {
   $dcachepkg="dcache-${dcache::version}.${dcache::release}.noarch"
 
   exec{'download-rpm':
-    command => "wget --no-check-certificate -O /tmp/${dcachepkg}.rpm http://www.dcache.org/downloads/1.9/repo/2.10/${dcachepkg}.rpm",
+    command => "wget --no-check-certificate -O /tmp/${dcachepkg}.rpm http://www.dcache.org/downloads/1.9/repo/2.13/${dcachepkg}.rpm",
     path    => '/usr/bin',
     creates => "/tmp/${dcachepkg}.rpm"
   }
